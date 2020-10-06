@@ -1,0 +1,7 @@
+mixin service(data)
+  .about__services-link
+    .about__services-image
+      img.about__services-link-img(src=data.img, alt=data.alt)
+    .about__services-text
+      h3.about__services-link-title= data.title
+      p.about__services-link-desc.text= data.desc

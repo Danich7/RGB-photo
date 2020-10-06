@@ -1,0 +1,233 @@
+@import "mixins"
+@import "fonts"
+@import "normalize"
+@import "common"
+
+.header
+  height: 100vh
+  background: linear-gradient(180deg, #1D1D1D 0%, rgba(29, 29, 29, 0.39) 100%), url(../img/back.jpg) no-repeat fixed center center/cover
+  &__menu
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 60px
+    margin-bottom: 150px
+  &__text
+    text-align: center
+    max-width: 45%
+    margin: auto
+  &__advantage
+    text-transform: uppercase
+    font-family: StyreneAWeb-Thin
+    font-style: normal
+    font-weight: 100
+    font-size: 20px
+    line-height: 26px
+    text-align: center
+    color: #FFFFFF
+    margin-bottom: 25px
+  &__title
+    text-transform: uppercase
+    font-family: StyreneAWeb-Thin
+    font-style: normal
+    font-weight: 100
+    font-size: 50px
+    line-height: 64px
+    color: #FFFFFF
+    margin-top: 0
+    margin-bottom: 45px
+  &__description
+    padding-bottom: 160px
+.bold
+  font-weight: bold
+.container
+  width: 90%
+  margin: auto
+  &-projects
+    max-width: 1130px
+    margin: auto
+.navigation__list
+  display: flex
+  justify-content: space-between
+  & li
+    list-style: none
+    margin-right: 50px
+  & li:last-child
+    margin-right: 0
+.navigation__link
+  text-decoration: none
+  background-image: linear-gradient(currentColor, currentColor)
+  background-position: 50% 100%           // 50% - ОТКУДА НАЧИНАТЬ ПО ГОРИЗОНТАЛИ (0% - СЛЕВА НАПРАВО)
+  background-repeat: no-repeat
+  background-size: 0% 1px
+  transition: background-size .2s
+  &:hover
+    background-size: 100% 1px
+.about
+  background: #1D1D1D
+  &__services
+    margin-bottom: 100px
+    &-row
+      display: flex
+    &-link
+      display: flex
+      margin-right: 11px
+      margin-bottom: 40px
+      max-height: 150px
+      width: 47%
+    &-title
+      margin-bottom: 45px
+    &-image
+      margin-right: 30px
+    &-link-title
+      font-family: StyreneAWeb-Bold
+      font-style: normal
+      font-weight: bold
+      font-size: 20px
+      line-height: 26px
+      color: #FFFFFF
+      margin-bottom: 10px
+      padding-top: 20px
+.tools__main
+  display: flex
+  align-items: center
+  margin-bottom: 60px
+  &-image
+    margin-right: 30px
+    width: 50%
+    max-width: 552px
+  &-img
+    width: 100%
+    height: auto
+.tools__text
+  max-width: 552px
+.tools__title
+  margin-bottom: 35px
+  padding-top: 0
+.tools__list
+  margin-bottom: 70px
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+.tools__img
+  margin-right: 30px
+  width: 100%
+  height: auto
+.projects
+  background: #212429
+  &__title
+    margin-bottom: 13px
+  &__description
+    width: 50%
+    margin-bottom: 45px
+.tabs__caption
+  display: flex
+.tabs__title
+  list-style: none
+  margin-right: 25px
+  margin-bottom: 30px
+  padding: 11px 18px
+  border: 1px solid #ffffff
+  cursor: pointer
+  &:hover
+    color: #1D1D1D
+    background: #ffffff
+  &:active
+    background: darken(#ffffff, 45%)
+  &.active
+    color: #1D1D1D
+    background: #ffffff
+    cursor: default
+.tabs__content
+  display: none
+  &.active
+    display: inline-block
+    margin-bottom: 100px
+  &-video
+    transition: all .2s
+    cursor: pointer
+    margin-bottom: 20px
+    margin-right: 20px
+    &:hover
+      transform: scale(1.1)
+.show-more
+  text-align: center
+  padding-bottom: 50px
+.clients
+  background: #1D1D1D
+  &__title
+    margin-bottom: 20px
+  &__description
+    margin-bottom: 40px
+  &__logo
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+.reviews
+  background:#1D1D1D
+  &__title
+    margin-bottom: 25px
+  &__description
+    margin-bottom: 30px
+  &__cards
+    display: flex
+    justify-content: space-between
+    margin-bottom: 45px
+.cards__item
+  max-width: 360px
+  text-align: center
+  box-shadow: 0px 4px 37px rgba(1, 6, 16, 0.31)
+  padding: 30px 25px 35px 25px
+  &-img
+    margin-bottom: 30px
+  &-name
+    font-family: StyreneAWeb-Bold
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 140%
+    color: #FFFFFF
+    margin-bottom: 26px
+  &-text
+    line-height: 140%
+.feedback
+  background: #212429
+  padding-bottom: 25px
+  &__header
+    text-align: center
+  &__title
+    margin-bottom: 20px
+  &__description
+    margin-bottom: 70px
+  &__form
+    min-width: 32%
+    background: #212429
+    border: 1px solid #FFFFFF
+    box-shadow: 0px 4px 37px rgba(10, 18, 32, 0.51)
+    padding: 15px 0px 15px 25px
+    margin-bottom: 20px
+    &.textarea
+      resize: vertical
+      min-height: 100px
+      max-height: 250px
+      width: 100%
+      margin-bottom: 30px
+    &:focus
+      background: #8f8f8f
+      border-radius: 8px
+      &::placeholder
+        color: #ffffff
+  &__btn
+    background: #212429
+.forms__button
+  text-align: right
+.forms__block
+  display: flex
+  justify-content: space-between
+.social-link
+  color: #ffffff
+
+@media ( max-width: 1024px )
+  .tools__img
+    margin-bottom: 30px  

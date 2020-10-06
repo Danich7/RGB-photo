@@ -1,0 +1,124 @@
+extends layouts/base
+include layouts/mixins
+
+block content
+  header.header
+    .container
+      .header__menu
+        a(href="#")
+          img.menu__logo(src="img/logo3.png", alt="logo")
+        nav.menu__navigation
+          ul.navigation__list
+            li
+              a.navigation__link.text(href="#") Услуги
+            li
+              a.navigation__link.text(href="#") Наши работы
+            li
+              a.navigation__link.text(href="#") Наши клиенты
+            li
+              a.navigation__link.text(href="#") Отзывы
+            li
+              a.navigation__link.text(href="#") Контакты
+      .header__text
+        p.header__advantage ВЕСЬ СПЕКТР ВИДЕО УСЛУГ
+        h1.header__title RGB STUDIO
+        p.header__description.text Наша студия предлагает своим клиентам весь комплекс услуг по проведению видеосъёмки не только в Ташкенте, но и по всему Узбекистану в форматах HD, FullHD и <span class="bold">4К</span>
+  main.about
+    .container
+      section.about__services
+        h2.about__services-title.title Наши услуги
+        .about__services-row
+          +service({img: "img/services-1.svg", alt: 'services-1', title: "Изготовление роликов", desc: "Имиджевое видео компаний, промо ролики, реклама, обучающее видео. Видеосъемка презентаций, конференций брифингов, спортивных мероприятий и т.д."})
+          +service({img: "img/services-2.svg", alt: 'services-2', title: "Видео трансляция", desc: "Беспроводная много камерная он-лайн трансляция на экраны и на любые площадки в Интернете различных мероприятий под ключ. Охватывает аудиторию в любой точке мира"})
+        .about__services-row
+          +service({img: "img/services-3.svg", alt: 'services-3', title: "Изготовление анимации", desc: "Демонстрируем полезность товара путем оживления вашей идеи в анимированном ролике. Максимально эффектный и привлекательный способ демонстрации вашей услуги или продукта"})
+          +service({img: "img/services-4.svg", alt: 'services-4', title: "Озвучка", desc: "Профессиональная озвучка любых текстов от лучших дикторов СНГ на любых языках. Помогает донести вашу мысль и вызывает доверие. Аудитория запомнит ваш бренд"})
+      section.tools
+        .tools__main
+          .tools__main-image
+            img.tools__main-img(src="img/tools.jpg", alt="tools")
+          .tools__text
+            h2.tools__title.title Техническое оснащение
+            p.tools__description.text В работе мы используем: <br><br> - Профессиональные видео камеры от ведущих мировых производителей  <br><br> - Трехосевые системы стабилизации от компании DJI. Обеспечивает лучшую стабилизацию съемки, сглаживание вибраций и тряски, что позволяет получить наилучшую задуманную картинку<br><br> - Для записи и трансляции звука используется немецкое оборудование компании Sennheiser Electronics  <br><br> - Для онлайн трансляции применяются беспроводные видеопередатчики с радиусом действия от 100 до 300 метров, видеомикшер.
+        .tools__list
+          img.tools__img(src="img/tools-1.jpg", alt="tools-1")
+          img.tools__img(src="img/tools-2.jpg", alt="tools-2")
+          img.tools__img(src="img/tools-3.jpg", alt="tools-3")
+          img.tools__img(src="img/tools-4.jpg", alt="tools-4")
+    section.projects
+      .container-projects
+        h2.projects__title.title Наши работы
+        p.projects__description.text Мы успешно реализовали более ста проектов для наших клиентов, часть из которых вы можете посмотреть в галерее.
+        .tabs
+          ul.tabs__caption
+            li.tabs__title.button.active(data-tab="#tab_1") Имиджевый ролик
+            li.tabs__title.button(data-tab="#tab_2") Реклама
+            li.tabs__title.button(data-tab="#tab_3") Презентация
+            li.tabs__title.button(data-tab="#tab_4") Трансляция
+          .tabs__content.active#tab_1
+            img.tabs__content-video(src="img/video-1.png", alt="video-1")
+            img.tabs__content-video(src="img/video-3.png", alt="video-3")
+            img.tabs__content-video(src="img/video-2.png", alt="video-2")
+            img.tabs__content-video(src="img/video-2.png", alt="video-2")
+            img.tabs__content-video(src="img/video-3.png", alt="video-3")
+          .tabs__content#tab_2
+            img.tabs__content-video(src="img/video-1.png", alt="video-1")
+            img.tabs__content-video(src="img/video-3.png", alt="video-3")
+            img.tabs__content-video(src="img/video-2.png", alt="video-2")
+            img.tabs__content-video(src="img/video-3.png", alt="video-3")
+            img.tabs__content-video(src="img/video-3.png", alt="video-3")
+            img.tabs__content-video(src="img/video-3.png", alt="video-3")
+          .tabs__content#tab_3
+            img.tabs__content-video(src="img/video-1.png", alt="video-1")
+            img.tabs__content-video(src="img/video-3.png", alt="video-3")
+            img.tabs__content-video(src="img/video-3.png", alt="video-3")
+            img.tabs__content-video(src="img/video-2.png", alt="video-2")
+          .tabs__content#tab_4
+            img.tabs__content-video(src="img/video-1.png", alt="video-1")
+            img.tabs__content-video(src="img/video-3.png", alt="video-3")
+            img.tabs__content-video(src="img/video-2.png", alt="video-2")
+        .show-more
+          a.button.youtube(href="#" target="_blank") Смотреть больше на YouTube
+    section.clients
+      .container
+        h2.clients__title.title Нам доверяют
+        p.clients__description.text Более 20-ти лет на рынке видео производства
+        .clients__logo
+          img.clients__img(src="img/hyatt-regency-logo2.png", alt="hyatt-regency")
+          img.clients__img(src="img/huawei-logo1.png", alt="huawei")
+          img.clients__img(src="img/carlsberg-logo1.png", alt="carlsberg")
+          img.clients__img(src="img/hotpoint-ariston-logo2.png", alt="hotpoint-ariston")
+    section.reviews
+      .container
+        h2.reviews__title.title Отзывы
+        p.reviews__description.text Почитайте отзывы тех, кто уже работал с нами
+        .reviews__cards
+          .cards__item
+            img.cards__item-img(src="img/Nargiza.png", alt="review-1")
+            p.cards__item-name Наргиза Аликулова
+            p.cards__item-text.text Студия обладает всем необходимым современным оборудованием для съемок сложных кадров, а также необходимым штатом профессоналов. Делают работу оперативно и качественно! Рекомендую!
+          .cards__item
+            img.cards__item-img(src="img/Aleksander.png", alt="review-2")
+            p.cards__item-name Александр Войнов
+            p.cards__item-text.text Уже много лет заказываю проекты разной сложности. Это тот партнер, которого я рекомендую в большинстве случаев. Из фактов я выделил следующее: это профессионалы перфекционисты, честные в своей работе.
+          .cards__item
+            img.cards__item-img(src="img/Svetlana.png", alt="review-3")
+            p.cards__item-name Светлана Бондаренко
+            p.cards__item-text.text Профессионалы! Заказывали рекламный ролик. Темпо-ритм, видео ряд, подобранная музыка - все было супер! Позже заказали еще один ролик - информационный. Ребята подсказывают что и как лучше сделать. Best of the Best!
+        .show-more
+          a.button.facebook(href="#" target="_blank") Смотреть отзывы на Facebook
+    section.feedback
+      .container
+        .feedback__header
+          h2.feedback__title.title Свяжитесь с нами
+          p.feedback__description.text Если у вас есть какие-то вопросы, мы на них ответим. Оставьте заявку на сайте, мы свяжемся с вами в течение часа. Или напишите нам сами: <a class="social-link" href="#">VK</a>, <a class="social-link" href="#">Facebook</a>, <a class="social-link" href="#">Instagram</a>, <a class="social-link" href="#">Telegram</a>
+        .feedback__forms
+          form(action="#")
+            .forms__block
+              input.feedback__form.text(type="text", name="name", placeholder="Имя")
+              input.feedback__form.text(type="tel", name="phone", placeholder="Телефон")
+              input.feedback__form.text(type="email", name="email", placeholder="Электронная почта")
+            textarea.feedback__form.textarea.text(name="message", placeholder="Сообщение")
+            .forms__button
+              input.feedback__btn.button(type="submit", value="Отправить заявку")
+          
